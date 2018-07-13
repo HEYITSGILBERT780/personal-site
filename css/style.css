@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,500');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+/* nav section */
+.nav {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: right;
+    background-color: #29323c;
+    padding: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.nav a > i {
+    margin-right: 3px;
+}
+
+/* header section */
+.home-header {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    align-items: center;
+    color: #fff;
+    height: 100vh;
+    text-align: center;
+    background: #114357;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(35deg, #114357, #F29492);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(35deg, #114357, #F29492); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */     
+}
+
+div {
+    height: 25%;
+}
+
+.home-header h1 {
+    font-size: 3em;
+    font-weight: 500;
+    margin-bottom: 2.5px;
+    letter-spacing: 3.5px;
+}
+
+.home-header p {
+    font-size: 1.5em;
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+/* links to code and contact email */
+.social-links a {
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+}
+
+.social-links i:hover {
+    top: -5px;
+    padding-bottom: 10px;
+    position: relative;
+    color: #2c3e50;
+}
+
+#logo {
+    height: 1.5em;
+    width: 1.5em;
+    vertical-align: -0.4em;
+}
+
+/* projects section */
+.project {
+    height: 50vh;
+}
+
+/* about me section */
+.about {
+    height: 25vh;
+}
