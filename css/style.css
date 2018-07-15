@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,500');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -91,10 +92,13 @@ body {
 /***** projects section *****/
 .projects {
     height: 100vh;
+    width: 75vw;
+    margin: auto;
 }
 
 h1 {
     font-weight: 500;
+    font-size: 32px;
     text-decoration: underline;
 }
 
@@ -149,9 +153,53 @@ header h1 > i {
     object-position: 40% 50%;
 }
 
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0.2, 0.2, 0.2, 0.75);
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    transition: .5s ease-in-out;
+  }
+  
+.app:hover .overlay, .app:hover .overlay > a, .app:hover .overlay > .desc {
+    height: 50%;
+    opacity: 1;
+}
+
+.app:hover {
+    top: -10px;
+}
+
+.overlay a {
+    color: white;
+    position:absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 20px;
+    opacity: 0;
+    transition: 1s ease-in;
+}
+
+.desc {
+    font-family: Lato;
+    color: white;
+    position:absolute;
+    top: 10%;
+    left: 5%;
+    right: 5%;
+    opacity: 0;
+    transition: 1s ease-in;
+}
+
 /***** about me section *****/
 .about {
     height: 25vh;
+    width: 75vw;
+    margin: auto;
 }
 
 .info {
