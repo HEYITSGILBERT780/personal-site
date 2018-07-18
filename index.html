@@ -12,12 +12,14 @@
 <body>
     <nav class="nav">
         <section class="nav-links">
-            <a href="#"><i class="fas fa-home"></i>Home</a>
+            <a href="#home" class="active"><i class="fas fa-home"></i>Home</a>
+            <a href="#project"><i class="fas fa-folder"></i>Projects</a>
             <a href="#"><i class="fas fa-file"></i>Resume</a>
+            <a href="#about-me"><i class="fas fa-info-circle"></i>About Me</a>
         </section>
     </nav>
 
-    <header class="home-header">
+    <header class="home-header" id="home">
         <div class="arrow"></div>
         <canvas class="dot-anim">Your browser does not support canvas.</canvas>
         <div>
@@ -34,7 +36,7 @@
     </header>
 
     <main>
-        <section class="projects">
+        <section class="projects" id="project">
             <header>
                 <h1 class="title"><i class="fas fa-folder"></i>Projects</h1>
             </header>
@@ -84,7 +86,7 @@
             </div>
         </section> 
 
-        <section class="about">
+        <section class="about" id="about-me">
             <header>
                 <h1 class="title"><i class="fas fa-info-circle"></i>About Me</h1>
             </header>

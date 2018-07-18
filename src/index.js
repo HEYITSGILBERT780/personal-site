@@ -23,7 +23,7 @@ window.addEventListener("load", function() {
 
     // set number of dots based on screen size
     function screen(w) {
-        if (w <= 767) {
+        if (w <= 768) {
             dotsNum = 50;
         } else if (w > 1224) {
             dotsNum = 250;
