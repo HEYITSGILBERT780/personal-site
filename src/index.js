@@ -17,12 +17,25 @@ window.addEventListener("load", function() {
 
     // array of dot objects
     var dots = [];
+    var dotsNum = 150;
+    screen(cWidth);
     create();
+
+    // set number of dots based on screen size
+    function screen(w) {
+        if (w <= 767) {
+            dotsNum = 50;
+        } else if (w > 1224) {
+            dotsNum = 250;
+        } else { // inbeetween width of 767 - 1224
+            dotsNum = 150;
+        }
+    }
 
     // function creates 150 dot objects, populates dot array, and draws
     // each dot on a random place on the canvas
     function create() {
-        for (i = 0; i < 150; i++) {
+        for (i = 0; i < dotsNum; i++) {
             // white color w/random opacity
             var color = 'rgba(255,255,255,' + Math.random() + ')';
 
@@ -115,9 +128,10 @@ window.addEventListener("load", function() {
         canvas.width  = canvas.offsetWidth;
         canvas.height = canvas.offsetHeight;
         cWidth = canvas.width;
-        cHeight= canvas.height;
+        cHeight = canvas.height;
         context.clearRect(0, 0, cWidth, cHeight);
         dots = [];
+        screen(cWidth);
         create();
     });
 });
