@@ -1,6 +1,6 @@
-window.addEventListener("load", function() {
+window.addEventListener("load", function() { 
     // reference to canvas element and context to draw shapes
-    var canvas = document.querySelector("canvas");
+    var canvas = this.document.querySelector("canvas");
     var context = canvas.getContext('2d');
 
     // resize canvas to size of parent element
@@ -134,4 +134,39 @@ window.addEventListener("load", function() {
         screen(cWidth);
         create();
     });
+
+    // get the home, projects, and about me sections
+    var home = this.document.getElementById("home");
+    var proj = this.document.getElementById("project");
+    var aboutMe = this.document.getElementById("about-me");
+
+    // height of home section, top position of the project and about
+    // section relative to the viewport, and current Y position of
+    // viewport
+    var h = home.offsetHeight;
+    var projTop = proj.getBoundingClientRect().top;
+    var aboutTop = aboutMe.getBoundingClientRect().top;
+    var viewYPos = window.pageYOffset;
+
+    // if section is in view on scroll, fade it into view 
+    window.addEventListener("scroll", function() {
+        viewYPos = window.pageYOffset + h;
+
+        if (viewYPos >= projTop) {
+            proj.classList.add("fade");
+        }
+
+        if (viewYPos >= aboutTop) {
+            aboutMe.classList.add("fade");
+        }
+    });
+
+    // if section is in view on load, fade it into view
+    if ((viewYPos + h) >= projTop) {
+        proj.classList.add("fade");
+    }
+
+    if (viewYPos >= aboutTop) {
+        aboutMe.classList.add("fade");
+    }
 });

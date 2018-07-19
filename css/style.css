@@ -55,8 +55,8 @@ body {
     margin-bottom: 2.5px;
     letter-spacing: 3.5px;
     text-decoration: none;
-    -webkit-animation: 1.25s fadein 0s ease;
-    animation: 1.25s fadein 0s ease;
+    -webkit-animation: 1s fadein ease;
+    animation: 1s fadein ease;
 } 
 
 .home-header p {
@@ -66,8 +66,8 @@ body {
     margin-top: 0;
     margin-bottom: 5px;
     opacity: 0;
-    -webkit-animation: 1.25s fadein 1.25s ease forwards;
-    animation: 1.25s fadein 1.25s ease forwards;
+    -webkit-animation: 1s fadein 1s ease forwards;
+    animation: 1s fadein 1s ease forwards;
 }
 
 /* links to code and contact email */
@@ -76,8 +76,8 @@ body {
     color: white;
     margin: 5px;
     opacity: 0;
-    -webkit-animation: 1.25s fadein 2.5s ease forwards;
-    animation: 1.25s fadein 2.5s ease forwards;
+    -webkit-animation: 1s fadein 2s ease forwards;
+    animation: 1s fadein 2s ease forwards;
 }
 
 @-webkit-keyframes fadein {
@@ -177,6 +177,7 @@ body {
     height: 100vh;
     width: 75vw;
     margin: auto;
+    opacity: 0;
 }
 
 h1 {
@@ -276,11 +277,43 @@ header h1 > i {
     transition: 1s ease-in;
 }
 
+.fade {
+    -webkit-animation: 1.5s project ease forwards;
+    animation: 1.5s project ease forwards;
+}
+
+@-webkit-keyframes project {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -5%, 0);
+        transform: translate3d(0, -5%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes project {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -5%, 0);
+        transform: translate3d(0, -5%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 /***** about me section *****/
 .about {
     height: 25vh;
     width: 75vw;
     margin: auto;
+    opacity: 0;
 }
 
 .info {
@@ -298,24 +331,33 @@ header h1 > i {
 
 .info p {
     font-family: Lato;
+    font-size: 18px;
 }
 
 /***** media queries *****/
 @media only screen and (max-width: 480px) {
+    /* home */
     .home-header h1 {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .home-header p {
         font-size: 1em;
     }
 
+    .home-header .arrow::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        bottom: 45px;
+    }
+
     .title {
-        margin: 0;
-        margin-bottom: 20px;
+        margin: 20px 0px;
         text-align: center;
     }
 
+    /* projects */
     .projects {
         height: 160vh;
     }
@@ -338,12 +380,45 @@ header h1 > i {
         font-size: 14px;
     }
 
+    .fade {
+        -webkit-animation: 1.5s project ease forwards;
+        animation: 1.5s project ease forwards;
+    }
+    
+    @-webkit-keyframes project {
+        0% {
+            opacity: 0;
+            -webkit-transform: translate3d(0, -2.5%, 0);
+            transform: translate3d(0, -2.5%, 0);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    
+    @keyframes project {
+        0% {
+            opacity: 0;
+            -webkit-transform: translate3d(0, -2.5%, 0);
+            transform: translate3d(0, -2.5%, 0);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    /* about */
     .info {
         grid-template-columns: 1fr;
     }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 1224px) {
+    /* project */
     .project-section {
         grid-template-columns: 1fr 1fr;
     }
@@ -358,5 +433,10 @@ header h1 > i {
     
     #clothr img {
         object-position: 50% 60%;
+    }
+
+    /* about */
+    .info p {
+        font-size: 16px;
     }
 }
