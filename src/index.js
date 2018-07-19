@@ -169,4 +169,12 @@ window.addEventListener("load", function() {
     if (viewYPos >= aboutTop) {
         aboutMe.classList.add("fade");
     }
+
+    var bars = this.document.getElementById("hamburger");
+    var navbar = this.document.getElementById("links");
+
+    bars.addEventListener("click", function() {
+        navbar.classList.toggle("active");
+        return false;
+    });
 });

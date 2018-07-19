@@ -9,8 +9,7 @@ body {
 
 /***** nav section *****/
 .nav {
-    display: grid;
-    justify-items: right;
+    text-align: right;
     background-color: #29323c;
     padding: 10px;
 }
@@ -23,11 +22,16 @@ body {
 }
 
 .nav a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    color: #F4B7B7;
 }
 
 .nav a > i {
     margin-right: 3px;
+}
+
+.nav .bars {
+    display: none;
 }
 
 /***** header section *****/
@@ -336,6 +340,28 @@ header h1 > i {
 
 /***** media queries *****/
 @media only screen and (max-width: 480px) {
+    /* nav */
+    .nav .bars {
+        display: block;
+        text-align: right;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a{
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .active {
+        display: block;
+    }
+
     /* home */
     .home-header h1 {
         font-size: 1.5em;
@@ -414,6 +440,10 @@ header h1 > i {
     /* about */
     .info {
         grid-template-columns: 1fr;
+    }
+
+    .info p {
+        font-size: 16px;
     }
 }
 
