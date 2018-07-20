@@ -21,8 +21,8 @@
     </nav>
 
     <section class="download-links">
-            <p>Download as a <a href="../assets/Resume.pdf" download>PDF</a></p>
-            <p>Download as a <a href="../assets/Resume.docx" download>Word doc</a></p>
+        <p>Download as a <a href="../assets/Resume.pdf" download>PDF</a></p>
+        <p>Download as a <a href="../assets/Resume.docx" download>Word doc</a></p>
     </section>
 
     <section class="resume">
@@ -30,13 +30,15 @@
             <h1>RESUME</h1>
         </header>
 
-        <section>
-            <h2>Work Experience</h2>
-            <h4>UCSC ResNet</h4>
-            <h4>Santa Cruz</h4>
-            <em>Student Technical Support Specialist</em>
-            <em>September 2016 - July 2017</em>
-            <ul>
+        <section class="workRes">
+            <h2 class="workTitle">Work Experience</h2>
+            <div>
+                <h3>UCSC ResNet</h3>
+                <p>Santa Cruz, CA</p>
+                <p><em>Student Technical Support Specialist</em></p>
+            </div>
+            <h4><em>September 2016 - July 2017</em></h4>
+            <ul class="workDet">
                 <li>
                     Worked with a team of technicians to troubleshoot network 
                     and software issues for clients in-person, over the phone, 
@@ -55,12 +57,12 @@
             </ul>
         </section>
         <hr>
-        <section>
+        <section class="projectRes">
             <h2>Projects</h2>
-            <section>
-                <h4>Random Movie Generator</h4>
+            <section class="projList">
+                <h3>Random Movie Generator</h3>
                 <h4>June 2018</h4>
-                <ul>
+                <ul class="projDet">
                     <li>
                         React app that helps users narrow down a movie to watch
                     </li>
@@ -74,20 +76,20 @@
                     </li>
                 </ul>
             </section>
-            <section>
-                <h4>Simple Personal Blog</h4>
+            <section class="projList">
+                <h3>Simple Personal Blog</h3>
                 <h4>February 2018</h4>
-                <ul>
+                <ul class="projDet">
                     <li>
                         Static blog site built with Jekyll with the layout 
                         created with HTML/CSS and posts written in Markdown
                     </li>
                 </ul>
             </section>
-            <section>
-                <h4>Northern Arizona University Ski & Snowboard Website</h4>
+            <section class="projList">
+                <h3>Northern Arizona University Ski & Snowboard Website</h3>
                 <h4>January 2018</h4>
-                <ul>
+                <ul class="projDet">
                     <li>
                         Designed and implemented a responsive website for the 
                         NAU club built with HTML/CSS
@@ -102,10 +104,10 @@
                     </li>
                 </ul>
             </section>
-            <section>
-                <h4>Clothr - Tinder for Clothes</h4>
+            <section class="projList">
+                <h3>Clothr - Tinder for Clothes</h3>
                 <h4>Sept - Dec 2017</h4>
-                <ul>
+                <ul class="projDet">
                     <li>
                         Developed an iOS app in swift on Xcode with a team of 
                         4 provide users easier access to desired clothing
@@ -119,10 +121,10 @@
                     </li>
                 </ul>
             </section>
-            <section>
-                <h4>EZRecipe - Recipe Generator</h4>
+            <section class="projList">
+                <h3>EZRecipe - Recipe Generator</h3>
                 <h4>Jan - March 2016</h4>
-                <ul>
+                <ul class="projDet">
                     <li>
                         Utilized the Scrum method and model-view-controller 
                         architecture to develop a web app using Python on web2py 
@@ -134,36 +136,42 @@
             </section>
         </section>
         <hr>
-        <section>
+        <section class="skills">
             <h2>Languages and Tools</h2>
             <div>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>jQuery</li>
-                    <li>Bootstrap</li>
-                    <li>Express</li>
-                    <li>Node.js</li>
-                    <li>Mongoose</li>
-                    <li>PostgreSQL</li>
-                    <li>Git</li>
-                </ul>
+                <div class="skills-list">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                    <p>Python</p>
+                    <p>Java</p>
+                    <p>jQuery</p>
+                    <p>Bootstrap</p>
+                    <p>Express</p>
+                    <p>Node.js</p>
+                    <p>Mongoose</p>
+                    <p>PostgreSQL</p>
+                    <p>Git</p>
+                </div>
             </div>
         </section>
         <hr>
-        <section>
+        <section class="edu">
             <h2>Education</h2>
-            <h4>University of California, Santa Cruz</h4>
+            <h3 class="school">University of California, Santa Cruz</h3>
             <h4>Sept 2014 - Dec 2017</h4>
             <em>Bachelor of Science in Computer Science</em>
-            <p>
-                Related Coursework: Analysis of Algorithms, Data Structures, 
-                Database Systems, Operating Systems, Intro to Software
-                Engineering, Web Applications
-            </p>
+            <p class="courses">Related Coursework:</p>
+            <ul>
+                <li>Analysis of Algorithms</li>
+                <li>Data Structures</li>
+                <li>Database Systems</li>
+            </ul>
+            <ul>
+                <li>Operating Systems</li>
+                <li>Intro to Software Engineering</li>
+                <li>Web Applications</li>
+            </ul>
         </section>
     </section>
 </body>

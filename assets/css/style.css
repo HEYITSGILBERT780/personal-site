@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:200,500');
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Lato:200,300,400');
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -7,7 +7,7 @@ body {
 }
 
 
-/***** nav section *****/
+/***** NAV SECTION *****/
 .nav {
     text-align: right;
     background-color: #29323c;
@@ -33,7 +33,7 @@ body {
     display: none;
 }
 
-/***** header section *****/
+/***** HEADER SECTION *****/
 .home-header {
     display: grid;
     justify-items: center;
@@ -115,7 +115,7 @@ body {
     top: -5px;
     padding-bottom: 10px;
     position: relative;
-    color: #2c3e50;
+    color: #114357;
 }
 
 #logo {
@@ -171,7 +171,7 @@ body {
     }
 }
 
-/***** projects section *****/
+/***** PROJECTS SECTION *****/
 .title {
     margin-left: 30px;
 }
@@ -218,24 +218,24 @@ header h1 > i {
     position: absolute;
 }
 
-#movie img {
+#movie {
     object-position: 55% 10%;
 }
 
-#nau img {
+#nau {
     object-position: 53% 50%;
 }
 
-#clothr img {
+#clothr {
     object-position: 50% 70%;
 }
 
-#ezrecipe img {
+#ezrecipe {
     object-position: 25% 50%;
 }
 
-#blog img {
-    object-position: 40% 50%;
+#blog {
+    object-position: 40% 10%;
 }
 
 .overlay {
@@ -249,7 +249,12 @@ header h1 > i {
     opacity: 0;
     transition: all .5s ease-in-out;
 }
-  
+
+.overlay a:hover {
+    color: #F29492;
+    transition: .5s ease;
+}
+
 .app:hover .overlay, .app:hover .overlay > a, .app:hover .overlay > .desc {
     height: 50%;
     opacity: 1;
@@ -270,7 +275,7 @@ header h1 > i {
 }
 
 .desc {
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     color: white;
     position:absolute;
     top: 10%;
@@ -311,7 +316,7 @@ header h1 > i {
     }
 }
 
-/***** about me section *****/
+/***** ABOUT ME SECTION *****/
 .about {
     height: 25vh;
     width: 75vw;
@@ -335,7 +340,7 @@ header h1 > i {
 }
 
 .info p {
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     font-size: 18px;
     padding: 20px;
     border: 2px solid rgba(0.2, 0.2, 0.2, 0.3);
@@ -344,21 +349,30 @@ header h1 > i {
 }
 
 
-/***** Resume Page *****/
+/***** RESUME PAGE *****/
 .resume-body {
-    text-align: center;
-    color: #fff;
+    color: #000;
     background-color: #000;
 }
 
-.resume-header, .download-links, .resume {
-    border: 1px solid white;
-    /* background: white; */
+.resume-body nav {
+    margin-bottom: 20px;
 }
 
+.download-links, .resume {
+    border-radius: 25px;
+    background: #fff;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+/* resume download links */
 .download-links {
     width: 15%;
+    /* height: 7.5vh; */
     margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .download-links p {
@@ -367,14 +381,133 @@ header h1 > i {
 
 .download-links a {
     text-decoration: underline;
-    color: #fff;
+    color: #000;
 }
 
 .download-links a:hover {
-    color: #F4B7B7; 
+    color: #F4B7B7;
+    transition: 0.5s ease; 
 }
 
-/***** media queries *****/
+/* resume styling */
+.resume {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+hr {
+    width: 80%;
+}
+
+.resume-header h1 {
+    /* padding-top: 10px; */
+    text-decoration: none;
+}
+
+.resume h2 {
+    border-left: 4px solid #114357;
+    padding-left: 3px;
+}
+
+.resume h2, .resume h3, .resume h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.workRes, .projectRes, .skills, .edu {
+    width: 95%;
+    margin: 20px auto; 
+    border: 1px solid grey;
+}
+
+
+/* work exp */
+.workRes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+}
+
+.workTitle {
+    grid-area: 1/1/2/3;
+}
+
+.resume h4 {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.workRes div>h3, .workRes div>p {
+    margin: 2px 20px;
+}
+
+.workDet {
+    grid-area: 3/1/4/3;
+    margin-right: 20px;
+}
+
+li, .resume h2, .workRes div, .projList h3 {
+    justify-self: start;
+    text-align: left;
+}
+
+/* projects */
+.projList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.25fr 0.5fr;
+}
+
+.projDet {
+    grid-area: 2/1/3/3;
+    margin: 0 20px 20px 0;
+}
+
+.projList h3, .projList h4 {
+    margin: 5px 20px;
+}
+
+/* skills */
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+/* education */
+.edu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .25fr .25fr .25fr .25fr 1fr;
+}
+
+.edu .school, .edu em, .edu p {
+    margin: 0 20px 0 20px;
+    justify-self: start;
+}
+
+.edu h2 {
+    grid-area: 1/1/2/3;
+}
+
+.edu h4 {
+    margin: 0 20px;
+}
+
+.edu em {
+    grid-area: 3/1/4/3;
+    margin-bottom: 10px;
+}
+
+.courses {
+    grid-area: 4/1/5/3;
+    text-align: left;
+}
+
+/***** MEDIA QUERIES *****/
 @media only screen and (max-width: 480px) {
     /* nav */
     .nav .bars {
