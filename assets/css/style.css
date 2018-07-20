@@ -22,7 +22,6 @@ body {
 }
 
 .nav a:hover {
-    /* text-decoration: underline; */
     color: #F4B7B7;
 }
 
@@ -329,13 +328,50 @@ header h1 > i {
 .info img {
     justify-self: center;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
+    border: 2px solid rgba(0.2, 0.2, 0.2, 0.75);
+    margin: 10px;
 }
 
 .info p {
     font-family: Lato;
     font-size: 18px;
+    padding: 20px;
+    border: 2px solid rgba(0.2, 0.2, 0.2, 0.3);
+    border-radius: 25px;
+    box-shadow: 7px 7px 7px #666;
+}
+
+
+/***** Resume Page *****/
+.resume-body {
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+}
+
+.resume-header, .download-links, .resume {
+    border: 1px solid white;
+    /* background: white; */
+}
+
+.download-links {
+    width: 15%;
+    margin: 0 auto;
+}
+
+.download-links p {
+    display: block;
+}
+
+.download-links a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.download-links a:hover {
+    color: #F4B7B7; 
 }
 
 /***** media queries *****/
@@ -385,7 +421,7 @@ header h1 > i {
 
     /* projects */
     .projects {
-        height: 160vh;
+        height: 200vh;
     }
 
     .project-section {
@@ -440,6 +476,11 @@ header h1 > i {
     /* about */
     .info {
         grid-template-columns: 1fr;
+    }
+
+    .info img {
+        width: 100px;
+        height: 100px;
     }
 
     .info p {
