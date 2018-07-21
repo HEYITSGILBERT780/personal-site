@@ -188,9 +188,11 @@ window.addEventListener("load", function() {
         aboutMe.classList.add("fade");
     }
 
+    // responsive nav bar 
     var bars = this.document.getElementById("hamburger");
     var navbar = this.document.getElementById("links");
 
+    // when 3 bars are clicked on nav bar, display links
     bars.addEventListener("click", function() {
         navbar.classList.toggle("active");
         return false;

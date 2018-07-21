@@ -25,7 +25,7 @@ body {
     color: #F4B7B7;
 }
 
-.nav a > i {
+.nav a i {
     margin-right: 3px;
 }
 
@@ -189,7 +189,7 @@ h1 {
     text-decoration: underline;
 }
 
-header h1 > i {
+header h1 i {
     margin-right: 5px;
 }
 
@@ -211,11 +211,51 @@ header h1 > i {
     border-radius: 5px;
 }
 
-.app > img {
+.app img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     position: absolute;
+}
+
+#fcc img {
+    -webkit-animation: 14s fccFade infinite ease-in-out;
+    animation: 14s fccFade infinite ease-in-out;
+}
+
+@keyframes fccFade {
+    0% {
+        opacity: 1;
+    }
+    17% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    92% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+  
+#fcc img:nth-of-type(1) {
+    -webkit-animation-delay: 10.5s;
+    animation-delay: 10.5s;
+}
+#fcc img:nth-of-type(2) {
+    -webkit-animation-delay: 7s;
+    animation-delay: 7s;
+}
+#fcc img:nth-of-type(3) {
+    -webkit-animation-delay: 3.5s;
+    animation-delay: 3.5s;
+}
+#fcc img:nth-of-type(4) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
 }
 
 #movie {
@@ -247,15 +287,17 @@ header h1 > i {
     width: 100%;
     height: 0;
     opacity: 0;
+    -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
 
 .overlay a:hover {
     color: #F29492;
+    -webkit-transition: .5s ease;
     transition: .5s ease;
 }
 
-.app:hover .overlay, .app:hover .overlay > a, .app:hover .overlay > .desc {
+.app:hover .overlay, .app:hover .overlay a, .app:hover .overlay .desc {
     height: 50%;
     opacity: 1;
 }
@@ -271,6 +313,7 @@ header h1 > i {
     left: 5%;
     font-size: 20px;
     opacity: 0;
+    -webkit-transition: 1s ease-in;
     transition: 1s ease-in;
 }
 
@@ -282,6 +325,7 @@ header h1 > i {
     left: 5%;
     right: 5%;
     opacity: 0;
+    -webkit-transition: 1s ease-in;
     transition: 1s ease-in;
 }
 
@@ -369,7 +413,6 @@ header h1 > i {
 /* resume download links */
 .download-links {
     width: 15%;
-    /* height: 7.5vh; */
     margin: 0 auto;
     text-align: center;
     margin-bottom: 20px;
@@ -386,6 +429,7 @@ header h1 > i {
 
 .download-links a:hover {
     color: #F4B7B7;
+    -webkit-transition: 0.5s ease;
     transition: 0.5s ease; 
 }
 
@@ -399,10 +443,10 @@ header h1 > i {
 
 hr {
     width: 80%;
+    opacity: 0.5;
 }
 
 .resume-header h1 {
-    /* padding-top: 10px; */
     text-decoration: none;
 }
 
@@ -440,7 +484,7 @@ hr {
     margin-right: 20px;
 }
 
-.workRes div>h3, .workRes div>p {
+.workRes div h3, .workRes div p {
     margin: 2px 20px;
 }
 
@@ -475,6 +519,30 @@ li, .resume h2, .workRes div, .projList h3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    margin-bottom: 10px;
+}
+
+.skills-list p {
+    border: 2px solid rgb(255, 163, 163);
+    background-color: rgb(255, 163, 163);
+    /* rgb(255, 163, 163) */
+    /* #F4B7B7 */
+    border-radius: 25px;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+    color: #fff;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.skills-list p:hover {
+    background-color: #fff;
+    color: rgb(255, 163, 163);
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
 }
 
 /* education */
@@ -505,6 +573,12 @@ li, .resume h2, .workRes div, .projList h3 {
 .courses {
     grid-area: 4/1/5/3;
     text-align: left;
+}
+
+.edu ul li:hover {
+    color: #F4B7B7;
+    -webkit-transition: .25s ease;
+    transition: .25s ease;
 }
 
 /***** MEDIA QUERIES *****/
@@ -562,7 +636,7 @@ li, .resume h2, .workRes div, .projList h3 {
         height: 93%;
     }
 
-    .app:hover .overlay, .app:hover .overlay > a, .app:hover .overlay > .desc {
+    .app:hover .overlay, .app:hover .overlay a, .app:hover .overlay .desc {
         height: 100%;
         opacity: 1;
     }
