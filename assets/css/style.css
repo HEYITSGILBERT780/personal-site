@@ -754,11 +754,15 @@ li, .resume h2, .workRes div, .projList h3 {
 
     /* home */
     .home-header h1 {
-        font-size: 1.5em;
+        font-size: 2em;
+    }
+
+    .social-links a i {
+        font-size: 1.75em;
     }
 
     .home-header p {
-        font-size: 1em;
+        font-size: 1.5em;
     }
 
     .home-header .arrow::after {
@@ -781,6 +785,10 @@ li, .resume h2, .workRes div, .projList h3 {
     .project-section {
         grid-template-columns: 1fr;
         height: 93%;
+    }
+
+    .overlay {
+        background-color: rgba(0.2, 0.2, 0.2, 0.75);
     }
 
     .app:hover .overlay, .app:hover .overlay a, .app:hover .overlay .desc {

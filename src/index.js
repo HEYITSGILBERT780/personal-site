@@ -18,8 +18,6 @@ window.addEventListener("load", function() {
     // array of dot objects
     var dots = [];
     var dotsNum = 150;
-    // social links in header section
-    var socialLinks = this.document.querySelectorAll(".fa-2x");
     screen(cWidth);
     create();
 
@@ -38,9 +36,6 @@ window.addEventListener("load", function() {
         if (w < 480) {
             // make social links smaller by looping through nodelist of
             // classes
-            for (var i = 0; i < socialLinks.length; i++) {
-                socialLinks[i].classList.remove("fa-2x");
-            }
         } else {
             if (!socialLinks[0].classList.contains("fa-2x")) {
                 for(var i = 0; i < socialLinks.length; i++) {
