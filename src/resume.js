@@ -8,4 +8,14 @@ window.addEventListener("load", function() {
         navbar.classList.toggle("active");
         return false;
     });
+
+    // canvas element and canvas
+    var canvas = this.document.querySelector("canvas");
+    var context = canvas.getContext("2d");
+
+    // resize canvas to size of parent
+    // canvas.style.width = "100%";
+    // canvas.style.height = "100%";
+    canvas.width = this.window.innerWidth;
+    canvas.height = this.window.innerHeight;
 });

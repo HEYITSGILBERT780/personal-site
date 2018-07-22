@@ -1,11 +1,11 @@
 window.addEventListener("load", function() { 
     // reference to canvas element and context to draw shapes
     var canvas = this.document.querySelector("canvas");
-    var context = canvas.getContext('2d');
+    var context = canvas.getContext("2d");
 
     // resize canvas to size of parent element
-    canvas.style.width='100%';
-    canvas.style.height='100%';
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
     canvas.width  = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 
