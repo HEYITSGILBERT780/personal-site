@@ -799,30 +799,31 @@ li, .resume h2, .workRes div, .projList h3 {
         height: 93%;
     }
 
-    .app:active .overlay, .app:hover .overlay {
+    .app:active .overlay, .app:focus .overlay {
         background-color: rgba(0.2, 0.2, 0.2, 0.75);
     }
 
     .app:hover .overlay, .app:hover .overlay a, .app:hover .overlay .desc {
         height: 100%;
-        background-color: rgba(0.2, 0.2, 0.2, 0.75);
         opacity: 1;
     }
 
     .overlay a {
         font-size: 16px;
+        color: #000;
     }
 
     .desc {
         font-size: 14px;
+        color: #000;
     }
 
     .fade {
-        -webkit-animation: 1.5s project ease forwards;
-        animation: 1.5s project ease forwards;
+        -webkit-animation: 1.5s projtMobile ease forwards;
+        animation: 1.5s projMobile ease forwards;
     }
     
-    @-webkit-keyframes project {
+    @-webkit-keyframes projMobile {
         0% {
             opacity: 0;
             -webkit-transform: translate3d(0, -2.5%, 0);
@@ -835,7 +836,7 @@ li, .resume h2, .workRes div, .projList h3 {
         }
     }
     
-    @keyframes project {
+    @keyframes projMobile {
         0% {
             opacity: 0;
             -webkit-transform: translate3d(0, -2.5%, 0);
