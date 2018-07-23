@@ -25,23 +25,11 @@ window.addEventListener("load", function() {
     function screen(w) {
         // set number of dots based on screen size
         if (w <= 768) {
-            dotsNum = 50;
+            dotsNum = 100;
         } else if (w > 1224) {
             dotsNum = 250;
         } else { // inbeetween width of 767 - 1224
             dotsNum = 150;
-        }
-
-        // change social link size based on screen size
-        if (w < 480) {
-            // make social links smaller by looping through nodelist of
-            // classes
-        } else {
-            if (!socialLinks[0].classList.contains("fa-2x")) {
-                for(var i = 0; i < socialLinks.length; i++) {
-                    socialLinks[i].classList.add("fa-2x");
-                }
-            }
         }
     }
 
