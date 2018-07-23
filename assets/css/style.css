@@ -805,6 +805,7 @@ li, .resume h2, .workRes div, .projList h3 {
 
     .app:hover .overlay, .app:hover .overlay a, .app:hover .overlay .desc {
         height: 100%;
+        background-color: rgba(0.2, 0.2, 0.2, 0.75);
         opacity: 1;
     }
 
