@@ -51,7 +51,7 @@ window.addEventListener("load", function() {
             let y = Math.floor(Math.random() * cHeight) + (rad * 2);
             let speed = 0.3 * Math.random();
 
-            var dot = {
+            let dot = {
                 x: x,
                 y: y,
                 radius: rad,
