@@ -1,7 +1,7 @@
 window.addEventListener("load", function() { 
     // reference to canvas element and context to draw shapes
-    var canvas = this.document.querySelector("canvas");
-    var context = canvas.getContext("2d");
+    const canvas = this.document.querySelector("canvas");
+    const context = canvas.getContext("2d");
 
     // resize canvas to size of parent element
     canvas.style.width = "100%";
@@ -10,14 +10,14 @@ window.addEventListener("load", function() {
     canvas.height = canvas.offsetHeight;
 
     // reference to canvas width and height to determine dot position
-    var cWidth = canvas.width;
-    var cHeight= canvas.height;
+    let cWidth = canvas.width;
+    let = cHeight= canvas.height;
     // initial direction of dot
-    var dir = ['+', '-'];
+    const dir = ['+', '-'];
 
     // array of dot objects
-    var dots = [];
-    var dotsNum = 150;
+    let dots = [];
+    let dotsNum = 150;
     screen(cWidth);
     create();
 
@@ -38,18 +38,18 @@ window.addEventListener("load", function() {
     function create() {
         for (i = 0; i < dotsNum; i++) {
             // white color w/random opacity
-            var color = 'rgba(255,255,255,' + Math.random() + ')';
+            let color = 'rgba(255,255,255,' + Math.random() + ')';
 
             // direction of left or right/up or down
-            var dirNum = Math.floor(Math.random() * 2);
-            var xMove = dir[dirNum];
-            var yMove = dir[dirNum];
+            let dirNum = Math.floor(Math.random() * 2);
+            let xMove = dir[dirNum];
+            let yMove = dir[dirNum];
 
             // randon location on canvas
-            var x = Math.floor(Math.random() * cWidth) + (rad*2);
-            var y = Math.floor(Math.random() * cHeight) + (rad*2);
-            var speed = 0.3 * Math.random();
-            var rad = 3;
+            const rad = 3;
+            let x = Math.floor(Math.random() * cWidth) + (rad * 2);
+            let y = Math.floor(Math.random() * cHeight) + (rad * 2);
+            let speed = 0.3 * Math.random();
 
             var dot = {
                 x: x,
@@ -137,17 +137,17 @@ window.addEventListener("load", function() {
     });
 
     // get the home, projects, and about me sections
-    var home = this.document.getElementById("home");
-    var proj = this.document.getElementById("project");
-    var aboutMe = this.document.getElementById("about-me");
+    const home = this.document.getElementById("home");
+    const proj = this.document.getElementById("project");
+    const aboutMe = this.document.getElementById("about-me");
 
     // height of home section, top position of the project and about
     // section relative to the viewport, and current Y position of
     // viewport
-    var h = home.offsetHeight;
-    var projTop = proj.getBoundingClientRect().top;
-    var aboutTop = aboutMe.getBoundingClientRect().top;
-    var viewYPos = window.pageYOffset;
+    let h = home.offsetHeight;
+    let projTop = proj.getBoundingClientRect().top;
+    let aboutTop = aboutMe.getBoundingClientRect().top;
+    let viewYPos = window.pageYOffset;
 
     // if section is in view on scroll, fade it into view 
     window.addEventListener("scroll", function() {
@@ -172,8 +172,8 @@ window.addEventListener("load", function() {
     }
 
     // responsive nav bar 
-    var bars = this.document.getElementById("hamburger");
-    var navbar = this.document.getElementById("links");
+    const bars = this.document.getElementById("hamburger");
+    const navbar = this.document.getElementById("links");
 
     // when 3 bars are clicked on nav bar, display links
     bars.addEventListener("click", function() {
